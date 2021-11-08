@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	window.onload = function(){
+		var time = 5;
+		var secondspan = document.getElementById("secondspan");
+		var timer = setInterval(function(){
+			
+			secondspan.innerHTML = time;
+			time--;
+			if(time == 0){
+				clearInterval(timer);
+				location.href = "http://www.baidu.com";
+			}
+			
+		}, 1000);
+	}
+</script>
+
+</head>
+<body>
+	恭喜您，注册成功！页面将在<span style="color: red" id="secondspan">5</span>秒后，自动跳转到主页！如果不跳转，请点<a href="http://www.baidu.com">这里</a>
+</body>
+</html>
